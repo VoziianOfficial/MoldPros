@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoldPros | Compare Local Mold Remediation Providers</title>
+
+    <meta name="description"
+        content="MoldPros helps homeowners compare independent local mold remediation providers for inspection, remediation, black mold removal, and attic or crawl space mold cleanup requests.">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo logo-premium-simple logo-mold-spore" href="index.html" aria-label="MoldPros home">
+                <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M33.2 5.8C38.1 5.8 40.1 10.2 39.1 14.2C38.5 16.7 39.3 19.1 41.5 20.3C43.6 21.5 46.1 20.5 47.7 18.6C50.8 14.8 56.5 16.6 57.3 21.5C57.8 24.7 55.9 27.2 53.3 28.2C50.6 29.3 49.5 31.9 50.8 34.4C52.1 36.8 55.1 37.2 57.5 38.6C61.4 40.8 61.6 46.9 57.4 49.4C54.4 51.2 51.2 50.2 49.1 47.8C47 45.5 43.9 45.6 42.2 48.2C40.8 50.4 41.5 53.4 40.4 55.9C38.5 60.4 32.2 60.9 29.7 56.7C28 53.8 28.8 50.7 31 48.5C32.8 46.7 32.4 43.7 29.9 42.7C26.9 41.5 24.8 43.9 22.4 46.2C19.5 49 14.4 48.6 12.1 45.1C9.5 41.1 11.8 36.8 15.8 35.6C18.7 34.7 20.4 32.7 19.7 30.2C19 27.7 16.4 27 13.8 26.5C9.2 25.6 7.4 20 10.7 16.7C13.4 14 17.2 14.6 19.5 17.2C21.2 19.1 23.9 19.7 25.8 18.1C27.9 16.3 27.2 13.7 27.7 11.2C28.2 8.2 30.2 5.8 33.2 5.8ZM37.6 25.1A3.8 3.8 0 1 0 37.6 32.7A3.8 3.8 0 1 0 37.6 25.1ZM28.3 36.8A2.4 2.4 0 1 0 28.3 41.6A2.4 2.4 0 1 0 28.3 36.8Z"
+                        fill="#307D80" />
+
+                    <circle cx="23.5" cy="9.2" r="2.6" fill="#8CC0C0" />
+                    <circle cx="50.7" cy="13.5" r="3.1" fill="#489C9E" />
+                    <circle cx="8.6" cy="31.2" r="3.4" fill="#489C9E" />
+                    <circle cx="53.7" cy="43.5" r="2.2" fill="#8CC0C0" />
+                    <circle cx="25.6" cy="57.1" r="3.2" fill="#489C9E" />
+                </svg>
+
+                <span class="logo-text">MoldPros</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <div class="services-dropdown" data-services-dropdown></div>
+                </div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-primary" href="tel:+18884206731" data-phone>
+                    Compare Mold Providers
+                </a>
+
+                <button class="mobile-menu-toggle" type="button" data-menu-toggle aria-label="Open menu"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <nav class="mobile-nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+
+                <button class="mobile-services-toggle" type="button" data-mobile-services-toggle aria-expanded="false">
+                    Services <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="mobile-services-list" data-mobile-services-list></div>
+
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-contact">
+                <a href="tel:+18884206731" data-phone-number>+1 888 420 6731</a>
+                <a href="mailto:hello@moldpros.com" data-email-link data-email>hello@moldpros.com</a>
+                <span data-address>1200 Brickell Avenue, Miami, FL 33131, USA</span>
+            </div>
+        </div>
+    </div>
+
+    <a class="sticky-service-btn" href="services.html">
+        <i class="fa-solid fa-table-cells-large"></i>
+        Services
+    </a>
+
+    <main id="main">
+
+        <section class="home-hero">
+            <div class="hero-bg">
+                <img src="images/home/hero-mold-remediation.jpg"
+                    alt="Mold remediation specialist inspecting a clean residential interior">
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content reveal-up">
+                        <span class="eyebrow">MoldPros Provider Matching</span>
+
+                        <h1>
+                            Mold remediation options, compared with clarity.
+                        </h1>
+
+                        <p class="lead">
+                            MoldPros helps homeowners explore mold inspection, remediation,
+                            black mold removal, and attic or crawl space cleanup options before moving forward
+                            with an independent local provider.
+                        </p>
+
+                        <p class="hero-subtext">
+                            Instead of contacting multiple companies one by one, homeowners can begin with a clearer
+                            overview of mold service categories, compare possible provider options, and make more
+                            informed decisions before hiring.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="contact.html">
+                                Request Mold Provider Options
+                            </a>
+
+                            <a class="btn btn-outline" href="services.html">
+                                View Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-hero-meta reveal-up">
+                    <p class="home-hero-meta-note">
+                        MoldPros is an independent matching platform. We do not perform mold inspection,
+                        testing, remediation, removal, cleanup, repairs, restoration, or contracting work directly.
+                        Final agreements are made between homeowners and independent providers.
+                    </p>
+
+                    <div class="home-hero-meta-item">
+                        <span>01</span>
+                        <strong>Define the concern</strong>
+                        <p>Start with the type of mold issue or affected area you are concerned about.</p>
+                    </div>
+
+                    <div class="home-hero-meta-item">
+                        <span>02</span>
+                        <strong>Compare options</strong>
+                        <p>Review independent provider possibilities that may serve your location.</p>
+                    </div>
+
+                    <div class="home-hero-meta-item">
+                        <span>03</span>
+                        <strong>Verify carefully</strong>
+                        <p>Confirm license, insurance, testing process, scope, pricing, and terms directly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-strip section">
+            <div class="container strip-grid">
+                <div class="strip-item reveal-up">
+                    <i class="fa-solid fa-magnifying-glass-location"></i>
+                    <h3>Compare</h3>
+                    <p>
+                        Review mold service types, property concerns, and the kind of provider support
+                        that may fit your home before requesting options.
+                    </p>
+                </div>
+
+                <div class="strip-item reveal-up">
+                    <i class="fa-solid fa-shield-virus"></i>
+                    <h3>Match</h3>
+                    <p>
+                        Your request can be routed toward independent mold remediation providers that may serve
+                        your area and respond based on your property details.
+                    </p>
+                </div>
+
+                <div class="strip-item reveal-up">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h3>Request</h3>
+                    <p>
+                        Ask for estimates, then verify license, insurance, testing process, containment scope,
+                        timelines, warranty details, and final agreement directly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-services section">
+            <div class="container">
+                <div class="home-services-head reveal-up">
+                    <div class="home-services-head__left">
+                        <span class="home-services-kicker">Mold service categories</span>
+                        <h2>Designed around the way homeowners compare.</h2>
+                    </div>
+
+                    <div class="home-services-head__right">
+                        <p class="home-services-lead">
+                            From inspection requests to attic and crawl space cleanup concerns, MoldPros keeps the
+                            process focused, clear, and centered around independent provider options.
+                        </p>
+
+                        <div class="home-services-meta">
+                            <span><i class="fa-solid fa-shield-halved"></i> Independent providers</span>
+                            <span><i class="fa-solid fa-list-check"></i> Scope-ready context</span>
+                            <span><i class="fa-solid fa-location-dot"></i> USA homeowner requests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-services-grid">
+                    <a class="home-service-card reveal-up" href="mold-inspection-testing.html">
+                        <div class="home-service-card__image">
+                            <img src="images/services/mold-inspection-testing.jpg"
+                                alt="Mold inspection specialist checking moisture in a home">
+                        </div>
+
+                        <div class="home-service-card__content">
+                            <span class="home-service-card__number">01</span>
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            <h3>Mold Inspection & Testing</h3>
+                            <p>Compare providers for mold inspection, moisture checks, and testing support.</p>
+                        </div>
+                    </a>
+
+                    <a class="home-service-card reveal-up" href="mold-remediation.html">
+                        <div class="home-service-card__image">
+                            <img src="images/services/mold-remediation.jpg"
+                                alt="Mold remediation equipment in a clean residential space">
+                        </div>
+
+                        <div class="home-service-card__content">
+                            <span class="home-service-card__number">02</span>
+                            <i class="fa-solid fa-shield-virus"></i>
+                            <h3>Mold Remediation</h3>
+                            <p>Compare providers for containment, cleanup planning, and remediation scope.</p>
+                        </div>
+                    </a>
+
+                    <a class="home-service-card reveal-up" href="black-mold-removal.html">
+                        <div class="home-service-card__image">
+                            <img src="images/services/black-mold-removal.jpg"
+                                alt="Professional mold remediation worker reviewing a wall area">
+                        </div>
+
+                        <div class="home-service-card__content">
+                            <span class="home-service-card__number">03</span>
+                            <i class="fa-solid fa-bacteria"></i>
+                            <h3>Black Mold Removal</h3>
+                            <p>Compare providers for suspected black mold concerns and careful cleanup planning.</p>
+                        </div>
+                    </a>
+
+                    <a class="home-service-card reveal-up" href="attic-crawl-space-mold.html">
+                        <div class="home-service-card__image">
+                            <img src="images/services/attic-crawl-space-mold.jpg"
+                                alt="Attic and crawl space mold inspection support">
+                        </div>
+
+                        <div class="home-service-card__content">
+                            <span class="home-service-card__number">04</span>
+                            <i class="fa-solid fa-house-chimney-crack"></i>
+                            <h3>Attic & Crawl Space Mold Cleanup</h3>
+                            <p>Compare providers for attic, basement, crawl space, and hidden moisture concerns.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-usecases section">
+            <div class="container">
+                <div class="home-usecases-grid">
+
+                    <div class="home-usecases-content reveal-up">
+                        <span class="home-usecases-kicker">Use cases</span>
+
+                        <h2>
+                            Mold concerns shaped around real homeowner situations.
+                        </h2>
+
+                        <p class="home-usecases-lead">
+                            A calmer way to compare moisture concerns, visible staining, musty odors,
+                            and hidden-area issues before speaking with independent providers.
+                        </p>
+
+                        <div class="home-usecases-list">
+                            <a class="home-usecase-item" href="mold-inspection-testing.html">
+                                <div class="home-usecase-icon">
+                                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                </div>
+
+                                <div>
+                                    <h3>Unclear mold concern</h3>
+                                    <p>
+                                        Compare providers for inspection, moisture checks, testing questions,
+                                        odors, stains, or possible hidden growth.
+                                    </p>
+                                </div>
+
+                                <span class="home-usecase-arrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+
+                            <a class="home-usecase-item" href="mold-remediation.html">
+                                <div class="home-usecase-icon">
+                                    <i class="fa-solid fa-shield-virus"></i>
+                                </div>
+
+                                <div>
+                                    <h3>Visible mold or water history</h3>
+                                    <p>
+                                        Review providers around containment planning, cleanup process,
+                                        moisture source questions, and written remediation scope.
+                                    </p>
+                                </div>
+
+                                <span class="home-usecase-arrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+
+                            <a class="home-usecase-item" href="attic-crawl-space-mold.html">
+                                <div class="home-usecase-icon">
+                                    <i class="fa-solid fa-house-chimney-crack"></i>
+                                </div>
+
+                                <div>
+                                    <h3>Attic, basement, or crawl space issue</h3>
+                                    <p>
+                                        Explore providers for ventilation, humidity, roof leak history,
+                                        crawl space moisture, and difficult-access areas.
+                                    </p>
+                                </div>
+
+                                <span class="home-usecase-arrow">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home-usecases-media reveal-up">
+                        <img src="images/home/usecases-mold.jpg"
+                            alt="Clean mold remediation inspection scene in a residential property">
+
+                        <div class="home-usecases-media-note">
+                            <span>MoldPros</span>
+                            <strong>Compare mold provider options before choosing who to contact.</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="metric-strip section">
+            <div class="container metric-grid">
+                <div class="metric-copy reveal-up">
+                    <span class="eyebrow">Platform signals</span>
+                    <h2>Small signals that make comparison easier.</h2>
+                    <p>
+                        MoldPros keeps the first step clean: homeowners choose a category,
+                        share a short property note, then compare independent providers
+                        without confusing direct-contractor claims.
+                    </p>
+                </div>
+
+                <div class="metric-tile reveal-up">
+                    <em>01</em>
+                    <strong data-count-to="4">0</strong>
+                    <span>focused mold categories</span>
+                </div>
+
+                <div class="metric-tile reveal-up">
+                    <em>02</em>
+                    <strong data-count-to="50" data-count-suffix="+">0</strong>
+                    <span>state-level search coverage</span>
+                </div>
+
+                <div class="metric-tile reveal-up">
+                    <em>03</em>
+                    <strong data-count-to="3">0</strong>
+                    <span>verification checkpoints</span>
+                </div>
+
+                <div class="metric-tile reveal-up">
+                    <em>04</em>
+                    <strong data-count-to="1">0</strong>
+                    <span>compact request flow</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-experience section">
+            <div class="container experience-grid">
+                <div class="experience-copy reveal-up">
+                    <span class="eyebrow">Premium comparison flow</span>
+                    <h2>A calmer way to start a mold remediation request.</h2>
+                    <p class="lead">
+                        Instead of searching through random listings, homeowners can start with
+                        clear categories, concise property context, and a simple request flow.
+                    </p>
+
+                    <div class="experience-list">
+                        <div>
+                            <span>01</span>
+                            <p>Select the mold service category that fits your concern.</p>
+                        </div>
+                        <div>
+                            <span>02</span>
+                            <p>Share basic details about the affected area, moisture history, and timing.</p>
+                        </div>
+                        <div>
+                            <span>03</span>
+                            <p>Compare independent provider options before choosing who to contact.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-visual reveal-up">
+                    <img src="images/home/mold-experience.jpg"
+                        alt="Professional mold remediation equipment in a clean room">
+                </div>
+            </div>
+        </section>
+
+        <section class="home-slider section">
+            <div class="container">
+                <div class="home-slider-head reveal-up">
+                    <div>
+                        <span class="home-slider-kicker">Property situations</span>
+                        <h2>Different homes need different mold conversations.</h2>
+                    </div>
+
+                    <p>
+                        Explore common homeowner situations before comparing independent provider options.
+                    </p>
+                </div>
+
+                <div class="home-slider-frame reveal-up">
+                    <div class="swiper homeProjectSwiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide project-slide">
+                                <img src="images/home/slider-mold-inspection.jpg"
+                                    alt="Mold inspection and moisture testing in a home">
+
+                                <div class="project-slide-overlay"></div>
+
+                                <div class="project-slide-content">
+                                    <span class="project-slide-number">01</span>
+
+                                    <div>
+                                        <span class="project-slide-label">Inspection</span>
+                                        <h3>Moisture and testing questions</h3>
+                                        <p>
+                                            Compare providers based on visual inspection, moisture checks,
+                                            sampling options, and next-step clarity.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide project-slide">
+                                <img src="images/home/slider-mold-remediation.jpg"
+                                    alt="Mold remediation containment and cleanup process">
+
+                                <div class="project-slide-overlay"></div>
+
+                                <div class="project-slide-content">
+                                    <span class="project-slide-number">02</span>
+
+                                    <div>
+                                        <span class="project-slide-label">Remediation</span>
+                                        <h3>Containment and cleanup scope</h3>
+                                        <p>
+                                            Review providers who can explain containment methods,
+                                            affected materials, disposal, and written scope.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide project-slide">
+                                <img src="images/home/slider-black-mold.jpg"
+                                    alt="Specialist checking suspected black mold area">
+
+                                <div class="project-slide-overlay"></div>
+
+                                <div class="project-slide-content">
+                                    <span class="project-slide-number">03</span>
+
+                                    <div>
+                                        <span class="project-slide-label">Black Mold</span>
+                                        <h3>Dark staining or recurring growth</h3>
+                                        <p>
+                                            Explore providers for suspected black mold concerns,
+                                            recurring moisture, and careful cleanup planning.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide project-slide">
+                                <img src="images/home/slider-attic-mold.jpg"
+                                    alt="Attic mold inspection and ventilation review">
+
+                                <div class="project-slide-overlay"></div>
+
+                                <div class="project-slide-content">
+                                    <span class="project-slide-number">04</span>
+
+                                    <div>
+                                        <span class="project-slide-label">Attic</span>
+                                        <h3>Ventilation and roof leak history</h3>
+                                        <p>
+                                            Compare providers around attic staining, humidity,
+                                            insulation concerns, and ventilation questions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide project-slide">
+                                <img src="images/home/slider-crawl-space-mold.jpg"
+                                    alt="Crawl space moisture and mold cleanup support">
+
+                                <div class="project-slide-overlay"></div>
+
+                                <div class="project-slide-content">
+                                    <span class="project-slide-number">05</span>
+
+                                    <div>
+                                        <span class="project-slide-label">Crawl Space</span>
+                                        <h3>Hidden moisture areas</h3>
+                                        <p>
+                                            Compare providers based on access needs, crawl space moisture,
+                                            vapor issues, and cleanup expectations.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide project-slide">
+                                <img src="images/home/slider-basement-mold.jpg"
+                                    alt="Basement moisture and mold remediation review">
+
+                                <div class="project-slide-overlay"></div>
+
+                                <div class="project-slide-content">
+                                    <span class="project-slide-number">06</span>
+
+                                    <div>
+                                        <span class="project-slide-label">Basement</span>
+                                        <h3>Basement odor or staining</h3>
+                                        <p>
+                                            Compare providers for moisture-prone spaces, musty odors,
+                                            wall staining, and source-control questions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="home-slider-controls">
+                        <button class="home-slider-btn home-slider-prev" type="button" aria-label="Previous slide">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <div class="swiper-pagination home-slider-pagination"></div>
+
+                        <button class="home-slider-btn home-slider-next" type="button" aria-label="Next slide">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-contact section" id="contact">
+            <div class="container">
+                <div class="home-contact-grid">
+
+                    <div class="home-contact-card home-contact-form-card">
+                        <div class="home-contact-card-inner">
+                            <div class="home-contact-top">
+                                <span class="home-contact-kicker">
+                                    <i class="fa-regular fa-message"></i>
+                                    Request options
+                                </span>
+
+                                <h2>Compare local mold provider options with confidence.</h2>
+
+                                <p class="home-contact-text">
+                                    Tell us what kind of mold concern you have and MoldPros will help you
+                                    explore matching independent providers in your area.
+                                </p>
+                            </div>
+
+                            <form class="home-contact-form" data-lead-form>
+                                <div class="home-contact-form-grid">
+                                    <label class="home-contact-field">
+                                        <span>Full Name</span>
+                                        <input type="text" name="name" placeholder="Your name" required>
+                                    </label>
+
+                                    <label class="home-contact-field">
+                                        <span>Email</span>
+                                        <input type="email" name="email" placeholder="you@example.com" required>
+                                    </label>
+
+                                    <label class="home-contact-field">
+                                        <span>Phone</span>
+                                        <input type="tel" name="phone" placeholder="(000) 123-4567" required>
+                                    </label>
+
+                                    <label class="home-contact-field home-contact-select">
+                                        <span>Service</span>
+                                        <select name="service" required>
+                                            <option value="">Select service</option>
+                                            <option>Mold Inspection & Testing</option>
+                                            <option>Mold Remediation</option>
+                                            <option>Black Mold Removal</option>
+                                            <option>Attic & Crawl Space Mold Cleanup</option>
+                                        </select>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </label>
+
+                                    <label class="home-contact-field home-contact-field-wide">
+                                        <span>Property Details <em>(optional)</em></span>
+                                        <textarea name="message" maxlength="500"
+                                            placeholder="Tell us about the affected area, moisture history, odors, or timing..."></textarea>
+                                        <small>0/500</small>
+                                    </label>
+                                </div>
+
+                                <div class="home-contact-bottom">
+                                    <div class="home-contact-trust">
+                                        <div>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <span>Secure form</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>Fast response</span>
+                                        </div>
+                                        <div>
+                                            <i class="fa-regular fa-circle-check"></i>
+                                            <span>No obligation</span>
+                                        </div>
+                                    </div>
+
+                                    <button class="home-contact-submit" type="submit">
+                                        Submit Request
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+
+                                    <p class="form-message" data-form-message></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="home-contact-card home-contact-map-card-wrap">
+                        <div class="home-contact-card-inner">
+                            <div class="home-contact-map-head">
+                                <span class="home-contact-kicker">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Service area
+                                </span>
+
+                                <h3>Serving homeowners across the United States.</h3>
+
+                                <p>
+                                    MoldPros helps you compare independent mold remediation providers
+                                    in your area with a more streamlined, calm, and transparent experience.
+                                </p>
+                            </div>
+
+                            <div class="home-contact-map-box">
+                                <iframe
+                                    src="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA&output=embed"
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                    title="MoldPros location map">
+                                </iframe>
+
+                                <div class="home-contact-map-overlay">
+                                    <div class="home-contact-address">
+                                        <strong>1200 Brickell Ave</strong>
+                                        <span>Miami, FL 33131, USA</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="home-contact-map-footer">
+                                <div class="home-contact-mini-stats">
+                                    <div>
+                                        <strong>50+</strong>
+                                        <span>States</span>
+                                    </div>
+                                    <div>
+                                        <strong>4</strong>
+                                        <span>Categories</span>
+                                    </div>
+                                    <div>
+                                        <strong>100%</strong>
+                                        <span>Independent</span>
+                                    </div>
+                                </div>
+
+                                <a class="home-contact-map-link"
+                                    href="https://www.google.com/maps?q=1200%20Brickell%20Avenue%20Miami%20FL%2033131%20USA"
+                                    target="_blank">
+                                    Open Directions
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="home-faq section">
+            <div class="container faq-grid">
+                <div class="section-header reveal-up">
+                    <div class="section-header__main">
+                        <span class="eyebrow">FAQ</span>
+                        <h2>Clear answers before you compare.</h2>
+                    </div>
+                </div>
+
+                <div class="faq-list reveal-up">
+                    <details>
+                        <summary>How do I compare local mold remediation providers?</summary>
+                        <p>Start by choosing a service category, then request provider options based on your concern,
+                            location, affected area, moisture history, timing, and property details.</p>
+                    </details>
+
+                    <details>
+                        <summary>Is MoldPros a mold remediation company?</summary>
+                        <p>No. MoldPros is an independent matching platform. Contractors and providers are independent,
+                            and homeowners choose who they contact or hire.</p>
+                    </details>
+
+                    <details>
+                        <summary>Does MoldPros provide medical advice or health guarantees?</summary>
+                        <p>No. MoldPros does not provide medical advice, health evaluations, or guaranteed health
+                            outcomes. Homeowners should consult qualified professionals for health-related concerns.</p>
+                    </details>
+
+                    <details>
+                        <summary>What affects mold remediation pricing?</summary>
+                        <p>Pricing may depend on the affected area, moisture source, property access, containment needs,
+                            testing process, material removal, cleanup scope, location, and the provider selected.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I compare local mold remediation providers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Start by choosing a service category, then request provider options based on your concern, location, affected area, moisture history, timing, and property details."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is MoldPros a mold remediation company?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. MoldPros is an independent matching platform. Contractors and providers are independent, and homeowners choose who they contact or hire."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does MoldPros provide medical advice or health guarantees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. MoldPros does not provide medical advice, health evaluations, or guaranteed health outcomes. Homeowners should consult qualified professionals for health-related concerns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What affects mold remediation pricing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pricing may depend on the affected area, moisture source, property access, containment needs, testing process, material removal, cleanup scope, location, and the provider selected."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/services-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
