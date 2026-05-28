@@ -20,6 +20,10 @@
 
     --color-accent: #489C9E;
     --color-accent-dark: #307D80;
+    --color-accent-green: #9EC65A;
+    --color-accent-green-hover: #8CB24C;
+    --color-accent-green-deep: #5F7F2F;
+    --color-accent-green-soft: #EEF6DF;
 
     --color-line: rgba(16, 23, 25, 0.12);
     --color-white: #F4F7F7;
@@ -55,6 +59,7 @@
     --shadow-soft: 0 18px 50px rgba(14, 23, 26, 0.14);
     --shadow-card: 0 14px 34px rgba(14, 23, 26, 0.10);
     --shadow-aqua: 0 18px 38px rgba(72, 156, 158, 0.24);
+    --shadow-green: 0 16px 34px rgba(158, 198, 90, 0.22);
 
     --font-main: "Manrope", system-ui, sans-serif;
     --font-display: "Sora", system-ui, sans-serif;
@@ -698,6 +703,27 @@ h3 {
 .footer-nav a,
 .footer-legal a {
     color: rgba(247, 245, 239, 0.72);
+}
+
+.footer-contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-contact-row i {
+    width: 18px;
+    margin-top: 2px;
+    color: rgba(247, 245, 239, 0.72);
+}
+
+.footer-contact-row p {
+    margin: 0;
+}
+
+.footer-contact-row a {
+    display: inline-block;
 }
 
 .footer-socials {
@@ -2380,6 +2406,10 @@ select:focus {
     color: rgba(244, 247, 247, 0.72) !important;
 }
 
+.footer-contact-row i {
+    color: rgba(244, 247, 247, 0.72) !important;
+}
+
 .site-footer a:hover {
     color: var(--color-accent-light) !important;
 }
@@ -2479,5 +2509,116 @@ select:focus-visible {
 
     .logo-mold-spore .logo-text {
         font-size: 1.1rem;
+    }
+}
+
+/* =========================================================
+   MoldPros vivid icon accent upgrade
+========================================================= */
+
+.card i,
+.strip-item i,
+.home-service-card i,
+.home-usecase-icon i,
+.metric-tile i,
+.service-hero-card i,
+.rail-item i,
+.service-verify-grid i,
+.contact-form-icon i,
+.contact-info-panel i,
+.contact-next-card i,
+.contact-mini-faq i,
+.legal-hero-card i,
+.services-dropdown i,
+.mobile-services-list i,
+.footer-socials i,
+.snapshot-media-badge i {
+    color: var(--color-accent-green-deep);
+}
+
+.strip-item>i,
+.home-usecase-icon,
+.service-hero-card>i,
+.service-verify-grid article>i,
+.contact-form-icon,
+.legal-hero-card>i {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background:
+        linear-gradient(135deg, rgba(238, 246, 223, 0.96), rgba(221, 235, 235, 0.92));
+    color: var(--color-accent-green-deep);
+    border: 1px solid rgba(158, 198, 90, 0.28);
+    box-shadow: var(--shadow-green);
+}
+
+.home-service-card__content>i,
+.metric-tile i,
+.compare-list i,
+.decision-card i,
+.service-feature i,
+.process-card i,
+.factor-card i {
+    color: var(--color-accent-green);
+    filter: drop-shadow(0 8px 14px rgba(158, 198, 90, 0.22));
+}
+
+.services-dropdown a i,
+.mobile-services-list a i {
+    color: var(--color-accent-green);
+}
+
+.services-dropdown a:hover i,
+.mobile-services-list a:hover i {
+    color: var(--color-accent-light);
+}
+
+.footer-socials a {
+    background: rgba(158, 198, 90, 0.12);
+    border: 1px solid rgba(158, 198, 90, 0.24);
+}
+
+.footer-socials a i {
+    color: var(--color-accent-green);
+}
+
+.footer-socials a:hover {
+    background: rgba(158, 198, 90, 0.2);
+    border-color: rgba(158, 198, 90, 0.42);
+    box-shadow: 0 14px 30px rgba(158, 198, 90, 0.18);
+}
+
+.footer-socials a:hover i {
+    color: #FFFFFF;
+}
+
+.strip-item:hover>i,
+.service-verify-grid article:hover>i,
+.legal-hero-card:hover>i,
+.service-hero-card:hover>i {
+    background:
+        linear-gradient(135deg, var(--color-accent-green), var(--color-accent));
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.26);
+    box-shadow:
+        0 18px 40px rgba(158, 198, 90, 0.24),
+        0 18px 38px rgba(72, 156, 158, 0.16);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+    .strip-item>i,
+    .home-usecase-icon,
+    .service-hero-card>i,
+    .service-verify-grid article>i,
+    .contact-form-icon,
+    .legal-hero-card>i {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
     }
 }

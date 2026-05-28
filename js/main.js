@@ -213,9 +213,20 @@ function renderFooter() {
 
                 <div class="footer-contact">
                     <h4>Contact</h4>
-                    <p>${cfg.address.full}</p>
-                    <a href="mailto:${cfg.email}">${cfg.email}</a>
-                    <a href="tel:${cfg.phoneHref}">${cfg.phone}</a>
+                    <div class="footer-contact-row">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <a href="tel:${cfg.phoneHref}">${cfg.phone}</a>
+                    </div>
+
+                    <div class="footer-contact-row">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <p>${cfg.address.full}</p>
+                    </div>
+
+                    <div class="footer-contact-row">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:${cfg.email}">${cfg.email}</a>
+                    </div>
                 </div>
 
                 <nav class="footer-legal" aria-label="Legal links">
