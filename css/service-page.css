@@ -1863,10 +1863,7 @@
     }
 }
 
-/* =========================================================
-   MoldPros service hero orbs
-   Replaces old .service-hero-card premium card
-========================================================= */
+
 
 .service-hero-orbs {
     grid-area: card;

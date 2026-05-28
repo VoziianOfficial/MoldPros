@@ -9,9 +9,7 @@
 
 
 :root {
-    /* =========================
-       MoldPros core palette
-    ========================= */
+    
     --color-bg: #F4F4F4;
     --color-bg-soft: #E8E9EB;
 
@@ -2072,7 +2070,7 @@ body {
     color: var(--color-text);
 }
 
-/* Header */
+
 .site-header {
     background: rgba(17, 27, 30, 0.84) !important;
     border-bottom: 1px solid rgba(244, 247, 247, 0.08) !important;
@@ -2086,7 +2084,7 @@ body {
     box-shadow: 0 16px 40px rgba(14, 23, 26, 0.22) !important;
 }
 
-/* Logo */
+
 .logo-premium-simple .logo-icon {
     stroke: var(--color-accent-light) !important;
     stroke-width: 2.25;
@@ -2113,7 +2111,7 @@ body {
     color: var(--color-accent-light) !important;
 }
 
-/* Desktop navigation */
+
 .desktop-nav a,
 .nav-dropdown-toggle {
     color: var(--color-text-light) !important;
@@ -2130,7 +2128,7 @@ body {
     background: var(--color-accent-light) !important;
 }
 
-/* Header CTA */
+
 .header-actions .btn-primary,
 .header-actions .btn-primary[data-phone] {
     background: var(--color-accent) !important;
@@ -2144,7 +2142,7 @@ body {
     color: #FFFFFF !important;
 }
 
-/* Burger */
+
 .mobile-menu-toggle {
     background: rgba(244, 247, 247, 0.08) !important;
     color: var(--color-text-light) !important;
@@ -2161,7 +2159,7 @@ body {
     color: #FFFFFF !important;
 }
 
-/* Dropdown */
+
 .services-dropdown {
     background: rgba(244, 247, 247, 0.96) !important;
     border: 1px solid rgba(16, 23, 25, 0.1) !important;
@@ -2188,7 +2186,7 @@ body {
     color: var(--color-accent-deep) !important;
 }
 
-/* Mobile menu */
+
 @media (max-width: 900px) {
     .mobile-menu {
         background:
@@ -2245,7 +2243,7 @@ body {
     }
 }
 
-/* Buttons */
+
 .btn-primary,
 .home-contact-submit,
 .contact-submit {
@@ -2296,7 +2294,7 @@ body {
         0 14px 30px rgba(72, 156, 158, 0.2) !important;
 }
 
-/* Text */
+
 h1,
 h2,
 h3 {
@@ -2316,7 +2314,7 @@ p {
     background: var(--color-accent);
 }
 
-/* Light cards */
+
 .premium-card,
 .factor-card,
 .service-option-card,
@@ -2348,7 +2346,7 @@ p {
     box-shadow: 0 18px 44px rgba(14, 23, 26, 0.12) !important;
 }
 
-/* Icon circles / card icons */
+
 .factor-card:hover i,
 .service-option-card:hover i,
 .service-feature:hover i,
@@ -2359,7 +2357,7 @@ p {
     color: var(--color-accent-strong) !important;
 }
 
-/* Forms */
+
 input,
 textarea,
 select {
@@ -2380,7 +2378,7 @@ select:focus {
     box-shadow: 0 0 0 4px rgba(72, 156, 158, 0.14) !important;
 }
 
-/* Sticky service button */
+
 .sticky-service-btn {
     background: var(--color-accent) !important;
     color: #FFFFFF !important;
@@ -2392,7 +2390,7 @@ select:focus {
     color: #FFFFFF !important;
 }
 
-/* Footer */
+
 .site-footer {
     background: var(--color-bg-deep) !important;
     color: var(--color-text-light) !important;
@@ -2424,7 +2422,7 @@ select:focus {
     color: var(--color-accent-light) !important;
 }
 
-/* Cookie banner */
+
 .cookie-banner {
     background: rgba(14, 23, 26, 0.96) !important;
     color: var(--color-text-light) !important;
@@ -2440,7 +2438,7 @@ select:focus {
     color: var(--color-text-light) !important;
 }
 
-/* Focus */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -2450,9 +2448,7 @@ select:focus-visible {
     outline-offset: 4px;
 }
 
-/* =========================
-   MoldPros filled mold logo
-========================= */
+
 
 .logo-mold-spore {
     display: inline-flex;
@@ -2501,7 +2497,7 @@ select:focus-visible {
     color: #8CC0C0 !important;
 }
 
-/* Footer version */
+
 .site-footer .logo-mold-spore .logo-text {
     color: #F4F7F7 !important;
 }
@@ -2522,9 +2518,7 @@ select:focus-visible {
     }
 }
 
-/* =========================================================
-   MoldPros vivid icon accent upgrade
-========================================================= */
+
 
 .card i,
 .strip-item i,
@@ -2630,5 +2624,59 @@ select:focus-visible {
         width: 40px;
         height: 40px;
         border-radius: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-hero .hero-content,
+    .service-hero .service-hero-copy,
+    .about-page .about-hero-copy,
+    .contact-hero .contact-hero-copy {
+        width: 100%;
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+    }
+
+    .home-hero .hero-content .eyebrow,
+    .service-hero .service-hero-copy .eyebrow,
+    .about-page .about-hero-kicker,
+    .contact-hero .contact-hero-kicker,
+    .contact-hero .contact-eyebrow {
+        justify-content: center;
+    }
+
+    .home-hero .hero-content h1,
+    .service-hero .service-hero-copy h1,
+    .about-page .about-hero h1,
+    .contact-hero .contact-hero-copy h1 {
+        width: 100%;
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center !important;
+    }
+
+    .home-hero .hero-content .lead,
+    .home-hero .hero-subtext,
+    .service-hero .service-hero-copy .lead,
+    .about-page .about-hero .lead,
+    .about-page .about-hero-subtext,
+    .contact-hero .contact-hero-copy .lead {
+        width: 100%;
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center !important;
+    }
+
+    .home-hero .hero-actions,
+    .service-hero .service-hero-actions,
+    .about-page .about-hero-actions,
+    .contact-hero .contact-hero-actions {
+        justify-content: center;
     }
 }
