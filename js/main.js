@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     applyGlobalData();
     renderServicesDropdowns();
     renderFooter();
+    applyConfigReplacements(window.SITE_CONFIG);
     initMobileMenu();
     initHeaderDropdown();
     initStickyHeader();
@@ -61,6 +62,189 @@ function applyGlobalData() {
 
     document.querySelectorAll("[data-disclaimer]").forEach((el) => {
         el.textContent = cfg.disclaimer;
+    });
+}
+
+function applyConfigReplacements(cfg) {
+    if (!cfg) return;
+
+    const addressFull = cfg.address?.full || "";
+    const addressLine1 = cfg.address?.line1 || "";
+    const companyName = cfg.companyName || "";
+    const companyId = cfg.companyId || "";
+    const phone = cfg.phone || "";
+    const phoneHref = cfg.phoneHref || "";
+    const phoneLabel = cfg.phoneLabel || "";
+    const email = cfg.email || "";
+
+    const replacementMap = {
+        /* Current MoldPros defaults */
+        "MoldPros": companyName,
+        "MLD-PRO-4827": companyId,
+        "+1 888 420 6731": phone,
+        "+18884206731": phoneHref,
+        "hello@moldpros.com": email,
+        "1200 Brickell Avenue, Miami, FL 33131, USA": addressFull,
+        "1200 Brickell Avenue": addressLine1,
+
+        /* Old Paneo leftovers */
+        "Paneo": companyName,
+        "PNO-WIN-4827": companyId,
+        "hello@paneomatch.com": email,
+        "Get Window Quotes": phoneLabel || "Compare Mold Providers"
+    };
+
+    const replaceInString = (value) => {
+        if (!value || typeof value !== "string") return value;
+
+        let updated = value;
+
+        Object.entries(replacementMap).forEach(([from, to]) => {
+            if (!from || !to) return;
+            updated = updated.replaceAll(from, to);
+        });
+
+        return updated;
+    };
+
+    /* Document title */
+    document.title = replaceInString(document.title);
+
+    /* Meta tags and common attributes */
+    const attrsToUpdate = [
+        "content",
+        "alt",
+        "aria-label",
+        "title",
+        "placeholder",
+        "value"
+    ];
+
+    document.querySelectorAll("*").forEach((el) => {
+        attrsToUpdate.forEach((attr) => {
+            if (!el.hasAttribute(attr)) return;
+
+            const currentValue = el.getAttribute(attr);
+            const newValue = replaceInString(currentValue);
+
+            if (newValue !== currentValue) {
+                el.setAttribute(attr, newValue);
+            }
+        });
+    });
+
+    /* Mail links */
+    document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+        link.href = `mailto:${email}`;
+
+        if (
+            link.hasAttribute("data-email") ||
+            link.textContent.includes("@")
+        ) {
+            link.textContent = email;
+        }
+    });
+
+    /* Phone links */
+    document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+        link.href = `tel:${phoneHref}`;
+
+        if (link.hasAttribute("data-phone-number")) {
+            link.textContent = phone;
+        }
+
+        if (link.hasAttribute("data-phone")) {
+            link.textContent = phoneLabel;
+        }
+    });
+
+    /* Direct data attributes */
+    document.querySelectorAll("[data-company]").forEach((el) => {
+        el.textContent = companyName;
+    });
+
+    document.querySelectorAll("[data-company-id]").forEach((el) => {
+        el.textContent = companyId;
+    });
+
+    document.querySelectorAll("[data-address]").forEach((el) => {
+        el.textContent = addressFull;
+    });
+
+    document.querySelectorAll("[data-email]").forEach((el) => {
+        el.textContent = email;
+    });
+
+    document.querySelectorAll("[data-email-link]").forEach((el) => {
+        el.href = `mailto:${email}`;
+    });
+
+    document.querySelectorAll("[data-phone-number]").forEach((el) => {
+        el.href = `tel:${phoneHref}`;
+        el.textContent = phone;
+    });
+
+    document.querySelectorAll("[data-phone]").forEach((el) => {
+        el.href = `tel:${phoneHref}`;
+        el.textContent = phoneLabel;
+    });
+
+    document.querySelectorAll("[data-disclaimer]").forEach((el) => {
+        el.textContent = cfg.disclaimer;
+    });
+
+    document.querySelectorAll("[data-footer-text]").forEach((el) => {
+        el.textContent = cfg.footerText;
+    });
+
+    document.querySelectorAll("[data-service-area]").forEach((el) => {
+        el.textContent = cfg.serviceArea;
+    });
+
+    /* Replace hardcoded visible text nodes */
+    const excludedTags = new Set(["SCRIPT", "STYLE", "NOSCRIPT", "SVG"]);
+
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode(node) {
+                const parent = node.parentElement;
+
+                if (!parent || excludedTags.has(parent.tagName)) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+
+                if (!node.nodeValue.trim()) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    const textNodes = [];
+
+    while (walker.nextNode()) {
+        textNodes.push(walker.currentNode);
+    }
+
+    textNodes.forEach((node) => {
+        const currentValue = node.nodeValue;
+        const newValue = replaceInString(currentValue);
+
+        if (newValue !== currentValue) {
+            node.nodeValue = newValue;
+        }
+    });
+
+    /* Google map iframe */
+    document.querySelectorAll('iframe[src*="google.com/maps"]').forEach((iframe) => {
+        if (!addressFull) return;
+
+        iframe.src = `https://www.google.com/maps?q=${encodeURIComponent(addressFull)}&output=embed`;
+        iframe.title = `${companyName} map location`;
     });
 }
 
