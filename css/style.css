@@ -2273,17 +2273,27 @@ body {
 
 .btn-ghost,
 .btn-outline {
-    border-color: rgba(244, 247, 247, 0.26) !important;
-    background: rgba(244, 247, 247, 0.08) !important;
+    border-color: rgba(140, 192, 192, 0.44) !important;
+    background: linear-gradient(135deg, rgba(72, 156, 158, 0.18), rgba(140, 192, 192, 0.1)) !important;
     color: var(--color-text-light) !important;
+    box-shadow: 0 14px 30px rgba(72, 156, 158, 0.18) !important;
     backdrop-filter: blur(18px);
 }
 
 .btn-ghost:hover,
 .btn-outline:hover {
-    background: rgba(72, 156, 158, 0.16) !important;
-    border-color: rgba(140, 192, 192, 0.42) !important;
+    background: linear-gradient(135deg, rgba(72, 156, 158, 0.3), rgba(140, 192, 192, 0.18)) !important;
+    border-color: rgba(140, 192, 192, 0.58) !important;
     color: #FFFFFF !important;
+    box-shadow: var(--shadow-aqua) !important;
+}
+
+.btn-ghost:focus-visible,
+.btn-outline:focus-visible {
+    border-color: rgba(140, 192, 192, 0.7) !important;
+    box-shadow:
+        0 0 0 3px rgba(140, 192, 192, 0.2),
+        0 14px 30px rgba(72, 156, 158, 0.2) !important;
 }
 
 /* Text */
